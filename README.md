@@ -58,6 +58,6 @@ python engine/eval.py -cfg  <config_dir> -s TEST_SET -ckpt <check_point_name> -o
 ```
 The `<check_point_name>` is the name of ckpt in `log/<dir_name>`, where the `<dir_name>` is the set "OUTPUT_DIR" in the config file. The result of IoU, Overall Accuracy and Consistency Rate wiil be written into `<output_log>`, for which the default name depends on the datetime. `<gpu_id>` is to set the gpu id for 'faiss' implementation of GPU based nearest neighbour search.
  
-###Custmized add-on
-####New sampling method
-####New dataset
+### Custmized add-on
+#### New sampling method
+#### New dataset
