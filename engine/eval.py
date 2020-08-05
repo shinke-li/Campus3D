@@ -24,8 +24,10 @@ parser.add_argument('-s', '--set', type=str, default='TEST_SET',
                     help='evaluation set: TEST_SET/VALIDATION_SET')
 parser.add_argument('-ckpt', '--check_point', type=str, default='epoch108_model.ckpt',
                     help='check point file name')
+parser.add_argument('-o', '--output', type=str, default='eval_{}.log'.format(datetime.now().strftime('%Y_%m_%d_%I%M')),
+                    help='output log file')
+parser.add_argument('-gpu', '--gpu_knn', type=int, default=None, help='gpu id for knn')
 args = parser.parse_args()
-
 eval_set = args.set
 
 # Load config
@@ -34,8 +36,7 @@ config.merge_cfg_from_dir(abs_cfg_dir)
 cfg = config.CONFIG
 
 #Load logger
-logger.file_output('eval_{}_{}.log'.format(eval_set,datetime.now().strftime('%Y_%m_%d_%I%M')),
-                   level='info')
+logger.file_output(args.output, level='info')
 log = logger.LOG
 log.info('Config DIR: {}\n PID: {}'.format(args.config, os.getpid()))
 log.info('Config Details {}:'.format(cfg))

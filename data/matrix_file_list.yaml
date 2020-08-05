@@ -1,6 +1,6 @@
 file_list:
-  - '/home/lixk/code/campusnet/data/l2.csv'
-  - '/home/lixk/code/campusnet/data/l5.csv'
-  - '/home/lixk/code/campusnet/data/l8.csv'
-  - '/home/lixk/code/campusnet/data/l14.csv'
-  - '/home/lixk/code/campusnet/data/l3.csv'
+  - 'h_matrices/l2.csv'
+  - 'h_matrices/l5.csv'
+  - 'h_matrices/l8.csv'
+  - 'h_matrices/l14.csv'
+  - 'h_matrices/l3.csv'
