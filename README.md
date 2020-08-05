@@ -7,13 +7,13 @@
 |  ----  | ----  |
 |python|2.7.17|
 |numpy|1.16.6|
-
-numba 0.47.0
-open3d 0.9.0.0
-pyyaml 5.1.2
-sparse 0.6.0
-h5py 2.10.0
-torch 1.0.0
-faiss-gpu 1.6.3 (optional for GPU KNN search)
-tensorflow-gpu 1.13.1
+|numba|0.47.0|
+|open3d|0.9.0.0|
+|pyyaml|5.1.2|
+|sparse|0.6.0|
+|h5py|2.10.0|
+|torch|1.0.0|
+|faiss-gpu|1.6.3| 
+|tensorflow-gpu|1.13.1|
+(optional for GPU KNN search)
 
