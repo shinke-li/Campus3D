@@ -18,7 +18,7 @@ from datetime import datetime
 import numpy as np
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-cfg', '--config', type=str, default='sem_seg_default_block',
+parser.add_argument('-cfg', '--config', type=str, default='configs/sem_seg_default_block',
                     help='config directory')
 parser.add_argument('-s', '--set', type=str, default='TEST_SET',
                     help='evaluation set: TEST_SET/VALIDATION_SET')
@@ -31,7 +31,7 @@ args = parser.parse_args()
 eval_set = args.set
 
 # Load config
-abs_cfg_dir = os.path.abspath(os.path.join(__file__, "../../configs/{}".format(args.config)))
+abs_cfg_dir = os.path.abspath(os.path.join(__file__, "../../{}".format(args.config)))
 config.merge_cfg_from_dir(abs_cfg_dir)
 cfg = config.CONFIG
 

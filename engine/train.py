@@ -15,12 +15,12 @@ from dataset.reader import read_h_matrix_file_list
 from dataset.loader import TorchDataset, TorchDataLoader
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-cfg', '--config', type=str, default='sem_seg_default_block',
+parser.add_argument('-cfg', '--config', type=str, default='configs/sem_seg_default_block',
                     help='config directory')
 args = parser.parse_args()
 
 # Load config
-abs_cfg_dir = os.path.abspath(os.path.join(__file__, "../../configs/{}".format(args.config)))
+abs_cfg_dir = os.path.abspath(os.path.join(__file__, "../../{}".format(args.config)))
 config.merge_cfg_from_dir(abs_cfg_dir)
 cfg = config.CONFIG
 

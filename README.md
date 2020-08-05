@@ -49,7 +49,7 @@ To apply training of the model:
 ```bash
 python engine/train.py -cfg <config_dir>
 ```
-The default `<config_dir>` is `sem_seg_default_block`. The model will be saved in `log/<dir_name>`, where the `<dir_name>` is the set "OUTPUT_DIR" in the config file.
+The default `<config_dir>` is `configs/sem_seg_default_block`. The model will be saved in `log/<dir_name>`, where the `<dir_name>` is the set "OUTPUT_DIR" in the config file.
 
 
 To apply evaluation of the model on the test set:
