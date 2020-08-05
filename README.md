@@ -3,7 +3,7 @@
 
 ### Running Environment
 The repo has been tested on Python 2.7.17 and Python 3.7.3.
-To implementation the model of [Pointnet2] (https://github.com/charlesq34/pointnet2), Python 2.7.17 and tensorflow 1.14 are required. 
+To implementation the model of [Pointnet2](https://github.com/charlesq34/pointnet2), Python 2.7.17 and tensorflow 1.14 are required. 
 
 |  Package   | Version  |
 |  ----  | ----  |
@@ -21,10 +21,11 @@ To implementation the model of [Pointnet2] (https://github.com/charlesq34/pointn
 faiss-gpu is optional for GPU KNN search. 
 
 ### Training and Evaluation 
-Download the [reduced version]((https://3d.dataset.site) of Campus3D and place them into `data`. The data folder should be in the following structure:
+Download the [reduced version](https://3d.dataset.site) of Campus3D and place them into `data`. The data folder should be in the following structure:
 ```
 ├── data
 │   ├── data_list.yaml
+|   ├── matrix_file_list.yaml
 │   └── area_name_1
 │       └── area_name_1.pcd
 |       └──  area_name_1labeX.npy
@@ -37,9 +38,8 @@ Download the [reduced version]((https://3d.dataset.site) of Campus3D and place t
 |       └──  ...
 │   └── ...
 ```
-The `sphere` folder contains the front-view XYZ maps converted from `velodyne` point clouds using the script in `./preprocess/sphere_map.py`. After data preparation, readers can train VS3D from scratch by running:
+Each folder of `area_name` contains the point cloud and label data of one area. For other structure of data, one can modify data config file `data_list.yaml` to set customized path. In addition, the train/val/test split can be reset by the data config file.  
 ```bash
 cd core
 python main.py --mode train --gpu GPU_ID
 ```
-The models are saved in `./core/runs/weights` during training. Reader can refer to `./core/main.py` for other options in training.
