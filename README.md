@@ -26,19 +26,23 @@ Download the [reduced version](https://3d.dataset.site) of Campus3D and place th
 ├── data
 │   ├── data_list.yaml
 |   ├── matrix_file_list.yaml
-│   └── area_name_1
-│       └── area_name_1.pcd
-|       └──  area_name_1labeX.npy
-|       └──  area_name_1labeY.npy
+|   └── h_matrices
+|       └──lX.csv
+|       └── ...
+│   └── <area_name_1>
+│       └── <area_name_1.pcd
+|       └──  <area_name_1>labeX.npy
+|       └──  <area_name_1>labeY.npy
 |       └──  ...
-│   └── area_name_2
-│       └── area_name_2.pcd
-|       └──  area_name_2labeX.npy
-|       └──  area_name_2labeY.npy
+│   └── <area_name_2>
+│       └── <area_name_2>.pcd
+|       └── <area_name_2>labeX.npy
+|       └── <area_name_2>labeY.npy
 |       └──  ...
 │   └── ...
 ```
-Each folder of `area_name` contains the point cloud and label data of one area. For other structure of data, one can modify data config file `data_list.yaml` to set customized path. In addition, the train/val/test split can be reset by the data config file.  
+Each folder of <area_name> contains the point cloud and label data of one area. The `h_matrices` folders contains the hierarchical linear relationship between the label in one level and the bottom level. For other structure of data, one can modify data config file `data_list.yaml` to set customized path. In addition, the train/val/test split can be reset by the data config file.
+For the setting of sampling and model, each folder in `configs` contains one version of setting. The default config folder is `configs\sem_seg_default_block`, and there are captions for arguments in the config file of this folder.
 ```bash
 cd core
 python main.py --mode train --gpu GPU_ID
