@@ -41,9 +41,19 @@ Download the [reduced version](https://3d.dataset.site) of Campus3D and place th
 |       └──  ...
 │   └── ...
 ```
-Each folder of <area_name> contains the point cloud and label data of one area. The `h_matrices` folders contains the hierarchical linear relationship between the label in one level and the bottom level. For other structure of data, one can modify data config file `data_list.yaml` to set customized path. In addition, the train/val/test split can be reset by the data config file.
+Each folder with <area_name> contains the point cloud and label data of one area. The `h_matrices` folders contains the hierarchical linear relationship between the label in one level and the bottom level. For other structure of data, one can modify data config file `data_list.yaml` to set customized path. In addition, the train/val/test split can be reset by the data config file.
+
 For the setting of sampling and model, each folder in `configs` contains one version of setting. The default config folder is `configs\sem_seg_default_block`, and there are captions for arguments in the config file of this folder.
+
+To apply training of the model:
 ```bash
-cd core
-python main.py --mode train --gpu GPU_ID
+python engine/train.py --cfg <config dir>
 ```
+The default `<config dir>` is `sem_seg_default_block`. The model will be saved in `log/<dir_name>`, where the `<dir_name>` is the set "OUTPUT_DIR" in the config file.
+
+
+To apply evaluation of the model:
+```bash
+python engine/eval.py --cfg  <config dir>
+```
+The default `<config dir>` is `sem_seg_default_block`. The model will be saved in `log/<dir_name>`, where the `<dir_name>` is the set "OUTPUT_DIR" in the config file.
