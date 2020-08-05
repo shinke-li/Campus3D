@@ -47,6 +47,7 @@ For the setting of sampling and model, each folder in `configs` contains one ver
 
 To apply training of the model:
 ```bash
+cd Campus3D
 python engine/train.py -cfg <config_dir>
 ```
 The default `<config_dir>` is `configs/sem_seg_default_block`. The model will be saved in `log/<dir_name>`, where the `<dir_name>` is the set "OUTPUT_DIR" in the config file.
@@ -54,6 +55,7 @@ The default `<config_dir>` is `configs/sem_seg_default_block`. The model will be
 
 To apply evaluation of the model on the test set:
 ```bash
+cd Campus3D
 python engine/eval.py -cfg  <config_dir> -s TEST_SET -ckpt <check_point_name> -o <output_log> -gpu <gpu_id>
 ```
 The `<check_point_name>` is the name of ckpt in `log/<dir_name>`, where the `<dir_name>` is the set "OUTPUT_DIR" in the config file. The result of IoU, Overall Accuracy and Consistency Rate wiil be written into `<output_log>`, for which the default name depends on the datetime. `<gpu_id>` is to set the gpu id for 'faiss' implementation of GPU based nearest neighbour search.
