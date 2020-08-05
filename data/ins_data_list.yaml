@@ -1,0 +1,40 @@
+MAIN_DATA_PATH: 'data'
+MAIN_LABEL_PATH: 'data'
+TRAIN_SET:
+  - DATA_PATH:
+      DATA: 'FASS/FASS.pcd'
+      LABEL:
+        - 'FASS/FASS_sem_label8.npy'
+        - 'FASS/FASS_ins_label8.npy'
+
+  - DATA_PATH:
+      DATA: 'YIH/YIH.pcd'
+      LABEL:
+        - 'YIH/YIH_sem_label8.npy'
+        - 'YIH/YIH_ins_label8.npy'
+
+  - DATA_PATH:
+      DATA: 'RA/RA.pcd'
+      LABEL:
+        - 'RA/RA_sem_label8.npy'
+        - 'RA/RA_ins_label8.npy'
+
+  - DATA_PATH:
+      DATA: 'UCC/UCC.pcd'
+      LABEL:
+        - 'UCC/UCC_sem_label8.npy'
+        - 'UCC/UCC_ins_label8.npy'
+
+TEST_SET:
+  - DATA_PATH:
+      DATA: 'FOE/FOE.pcd'
+      LABEL:
+        - 'FOE/FOE_sem_label8.npy'
+        - 'FOE/FOE_ins_label8.npy'
+
+VALIDATION_SET:
+  - DATA_PATH:
+      DATA: 'PGP/PGP.pcd'
+      LABEL:
+        - 'PGP/PGP_sem_label8.npy'
+        - 'PGP/PGP_ins_label8.npy'

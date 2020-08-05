@@ -1,0 +1,37 @@
+version: 1
+disable_existing_loggers: true
+formatters:
+  brief:
+    format: "%(asctime)s - %(message)s"
+  simple:
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  standard:
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+handlers:
+  console:
+    class : logging.StreamHandler
+    formatter: standard
+    level   : INFO
+    stream  : ext://sys.stdout
+  file:
+    class : logging.FileHandler
+    formatter: standard
+    level: DEBUG
+    filename: debug.log
+  error:
+    class: logging.handlers.RotatingFileHandler
+    level: ERROR
+    formatter: standard
+    filename: error.log
+    maxBytes: 10485760
+    backupCount: 20
+    encoding: utf8
+loggers:
+  collects:
+    level: DEBUG
+    handlers: [console, file, error]
+    propagate: no
+root:
+  level: NOTSET
+  handlers: [console]
+  propagate: yes

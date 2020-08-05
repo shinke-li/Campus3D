@@ -1,0 +1,22 @@
+MODEL: 'tensorflow.ins_seg.ASIS'
+TRAIN:
+  BATCH_SIZE: 16
+  MAX_EPOCH: 150
+  OUTPUT_DIR: '/home/lixk/code/campusnet/log/ins_seg_asis_0724'
+  PRETRAINED_MODEL_PATH: false
+  SETTING:
+    #SGPN
+    MARGIN_SAME: 10.
+    MARGIN_DIFF: 80.
+    #Pointnet2
+    RADIUS:
+      - 0.5
+      - 1.0
+      - 2.0
+      - 4.0
+
+
+DEVICES:
+  GPU_ID:
+    - 0
+

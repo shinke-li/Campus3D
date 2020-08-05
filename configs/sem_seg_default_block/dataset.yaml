@@ -1,0 +1,32 @@
+DATASET:
+        DATA:
+                DATA_LIST_FILE: "data/data_list.yaml"
+                LABEL_NUMBER:
+                        - 3
+                        - 4
+                        - 6
+                        - 9
+                        - 15
+                H_MATRIX_LIST_FILE:  'data/matrix_file_list.yaml'
+                USE_COLOR: true
+                COLOR_CHANNEL:
+                        - 3
+                        - 4
+                        - 5
+        SAMPLE:
+                LABEL_WEIGHT_POLICY: "log"
+                SAMPLER_TYPE: 'BlockSampler'
+                SETTING:
+                        MODIFY_TYPE:
+                                - 'block_centeralization'
+                                #- 'global_normalization'
+                        NUM_POINTS_PER_SAMPLE: 2048
+                        KNN_MODULE: 'Open3dNN'
+                        OVERLAP_RATIO: 0.5
+                        BOX_SIZE_X: 12
+                        BOX_SIZE_Y: 12
+                        IGNORE_FINE_BOUNDS: True
+                        SLIDING_RATIO: 0.5
+                        SPARSE_THRESH: 0.3
+                RETURN_INDEX: false
+                RANDOM_SEED_BASIS: 0
