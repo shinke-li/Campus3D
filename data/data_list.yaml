@@ -22,9 +22,9 @@ TRAIN_SET:
       LABEL:
         - 'RA/RAlabel2.npy'
         - 'RA/RAlabel3.npy'
-        - 'RAlabel5.npy'
-        - 'RAlabel8.npy'
-        - 'RAlabel14.npy'
+        - 'RA/RAlabel5.npy'
+        - 'RA/RAlabel8.npy'
+        - 'RA/RAlabel14.npy'
   - DATA_PATH:
       DATA: 'UCC/UCC.pcd'
       LABEL:
