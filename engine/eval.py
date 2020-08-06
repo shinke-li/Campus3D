@@ -5,7 +5,8 @@ from __future__ import unicode_literals
 import sys
 import os
 import argparse
-sys.path.insert(0, os.path.abspath(os.path.join(__file__, "../..")))
+ROOT_DIR = os.path.abspath(os.path.join(__file__, "../.."))
+sys.path.insert(0, ROOT_DIR)
 from utils import logger
 from engine import config
 from importlib import import_module
@@ -70,7 +71,7 @@ if True:
     path_label = heirarchical_ensemble(logits, HM, weight=np.full((5,), 1.0))
 
     log.info('Interpolation')
-    D, I = interpolate(sparse_points=points, dense_points=TEST_DATASET.points[0], GPU_id=0)
+    D, I = interpolate(sparse_points=points, dense_points=TEST_DATASET.points[0], GPU_id=args.gpu_knn)
 
     
 

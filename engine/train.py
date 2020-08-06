@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 import sys
 import os
 import argparse
-sys.path.insert(0, os.path.abspath(os.path.join(__file__, "../..")))
-
+ROOT_DIR = os.path.abspath(os.path.join(__file__, "../.."))
+sys.path.insert(0, ROOT_DIR)
 from datetime import datetime
 from utils import logger
 from engine import config
@@ -42,7 +42,7 @@ metric_cal = import_module('utils.metric')
 #Set GPU
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = ','.join([str(i) for i in cfg.DEVICES.GPU_ID])
-
+#train_process.train(cfg, None, None, metric_cal, h_matrices=HM, logger=None)
 #Load dataset
 TRAIN_DATASET = TorchDataset("TRAIN_SET",
                             params=cfg.DATASET,

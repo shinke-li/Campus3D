@@ -9,30 +9,31 @@ TRAIN_SET:
         - 'FASS/FASSlabel5.npy'
         - 'FASS/FASSlabel8.npy'
         - 'FASS/FASSlabel14.npy'
-  - DATA_PATH:
-      DATA: 'YIH/YIH.pcd'
-      LABEL:
-        - 'YIH/YIHlabel2.npy'
-        - 'YIH/YIHlabel3.npy'
-        - 'YIH/YIHlabel5.npy'
-        - 'YIH/YIHlabel8.npy'
-        - 'YIH/YIHlabel14.npy'
-  - DATA_PATH:
-      DATA: 'RA/RA.pcd'
-      LABEL:
-        - 'RA/RAlabel2.npy'
-        - 'RA/RAlabel3.npy'
-        - 'RA/RAlabel5.npy'
-        - 'RA/RAlabel8.npy'
-        - 'RA/RAlabel14.npy'
-  - DATA_PATH:
-      DATA: 'UCC/UCC.pcd'
-      LABEL:
-        - 'UCC/UCClabel2.npy'
-        - 'UCC/UCClabel3.npy'
-        - 'UCC/UCClabel5.npy'
-        - 'UCC/UCClabel8.npy'
-        - 'UCC/UCClabel14.npy'
+#  - DATA_PATH:
+#      DATA: 'YIH/YIH.pcd'
+#      LABEL:
+#        - 'YIH/YIHlabel2.npy'
+#        - 'YIH/YIHlabel3.npy'
+#        - 'YIH/YIHlabel5.npy'
+#        - 'YIH/YIHlabel8.npy'
+#        - 'YIH/YIHlabel14.npy'
+#  - DATA_PATH:
+#      DATA: 'RA/RA.pcd'
+#      LABEL:
+#        - 'RA/RAlabel2.npy'
+#        - 'RA/RAlabel3.npy'
+#        - 'RA/RAlabel5.npy'
+#        - 'RA/RAlabel8.npy'
+#        - 'RA/RAlabel14.npy'
+#  - DATA_PATH:
+#      DATA: 'UCC/UCC.pcd'
+#      LABEL:
+#        - 'UCC/UCClabel2.npy'
+#        - 'UCC/UCClabel3.npy'
+#        - 'UCC/UCClabel5.npy'
+#        - 'UCC/UCClabel8.npy'
+#        - 'UCC/UCClabel14.npy'
+
 TEST_SET:
   - DATA_PATH:
       DATA: 'FOE/FOE.pcd'

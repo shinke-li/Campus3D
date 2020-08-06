@@ -231,25 +231,21 @@ def train(cfg, train_data_loader, validation_data_loader, metric_module, logger,
 
 
         sess = tf.Session(config=config)
-        ckptstate = tf.train.get_checkpoint_state(os.path.dirname(MODEL_PATH))
-        #ckptstate.all_model_checkpoint_paths
-        if ckptstate is not None:
-            #log_string('Pretrained state:{}'.format(ckptstate))
+        ckptstate = tf.train.get_checkpoint_state(MODEL_PATH)
+        log_string('Pretrained state:{}'.format(ckptstate))
+        if MODEL_PATH:
             saver.restore(sess, MODEL_PATH)
             log_string('Restore model: {}'.format(MODEL_PATH))
-        else:
-            # Init variables
-
-            init = tf.global_variables_initializer()
-            sess.run(init)
 
         # Add summary writers
         merged = tf.summary.merge_all()
         train_writer = tf.summary.FileWriter(os.path.join(LOG_DIR, 'train'), sess.graph)
         #test_writer = tf.summary.FileWriter(os.path.join(LOG_DIR, 'test'), sess.graph)
 
-
-
+        # Init variables
+        if not MODEL_PATH:
+            init = tf.global_variables_initializer()
+            sess.run(init)
 
         ops = {'pointclouds_pl': pointclouds_pl,
                'labels_pl': labels_pl,
@@ -276,6 +272,7 @@ def train(cfg, train_data_loader, validation_data_loader, metric_module, logger,
                     log_string("Model saved in file: %s" % save_path)
         except Exception as e:
             traceback.print_exc()
+        #LOG_FOUT.close()
 
 
 

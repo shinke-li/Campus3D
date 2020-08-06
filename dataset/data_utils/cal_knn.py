@@ -1,8 +1,15 @@
 from .o3d import kdtree as o3d_kdtree
 from concurrent.futures import ThreadPoolExecutor
+from importlib import import_module
 import numpy as np
-import faiss
-import os
+
+FAISS_INSTALLED = False
+try:
+    faiss = import_module('faiss')
+    FAISS_INSTALLED = True
+except Exception as e:
+    print(e)
+    print('Cannot import faiss for GPU nearest neighbout search, use Open3d instead.')
 
 class _NearestNeighbors(object):
     def __init__(self, set_k=None, **kwargs):
