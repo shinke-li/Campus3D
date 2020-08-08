@@ -28,14 +28,15 @@ The compiled `*.so` files in this repo was based on CUDA 10.0 and above python p
 #### Docker
 
 To deploy the environment easily, docker file in `docker` is provided. Below is the example of using the docker. 
+
 First build the docker image:
 ```bash
 cd docker
-nvidia-docker build -t shinkeli/campus3d:latest .
+docker build -t shinkeli/campus3d:latest .
 ```
-Run the docker in bash:
+Run the docker (version>=19.03 with nvidia-container-toolkit) in bash:
 ```bash
-nvidia-docker run -it -v <path_to_Campus3D>:/root/Campus3D shinkeli/campus3d:latest /bin/bash
+docker run -it --gpu all -v <path_to_Campus3D>:/root/Campus3D shinkeli/campus3d:latest /bin/bash
 ```
 
 ### Training and Evaluation 
