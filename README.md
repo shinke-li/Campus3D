@@ -36,7 +36,7 @@ docker build -t shinkeli/campus3d:latest .
 ```
 Run the docker (version>=19.03 with nvidia-container-toolkit) in bash:
 ```bash
-docker run -it --gpu all -v <path_to_Campus3D>:/root/Campus3D shinkeli/campus3d:latest /bin/bash
+docker run -it --gpus all -v <path_to_Campus3D>:/root/Campus3D shinkeli/campus3d:latest /bin/bash
 ```
 
 ### Training and Evaluation 
