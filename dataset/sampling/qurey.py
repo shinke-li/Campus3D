@@ -28,7 +28,7 @@ class BlockQuery(object):
 
     def get_block_search_dim(self):
         search_dim = (self.block_size - self.sparse_voxel.voxel_size[:2]) / \
-                     self.sparse_voxel.voxel_size[:2] / 2
+                     self.sparse_voxel.voxel_size[:2] / 2.0
         new_search_dim = np.ceil(search_dim).astype(np.int)
         if np.sum(new_search_dim != search_dim) == 0:
             self.ignored_fine_bound = True
