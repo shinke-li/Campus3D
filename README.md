@@ -2,6 +2,7 @@
 #### The repository contains the utilization and implementation of this [ACM MM 2020 Paper](https://3d.dataset.site). The Campus3D dataset including full version and reduced version can be donwloaded from our [official website](https://3d.dataset.site) or the [alternative](https://3d.nus.app).
 
 ### Running Environment
+#### Python packages
 The repo has been tested on Python 2.7.17 and Python 3.7.3.
 To implementation the model of [Pointnet2](https://github.com/charlesq34/pointnet2), Python 2.7.17 and tensorflow 1.14 are required. 
 
@@ -19,6 +20,24 @@ To implementation the model of [Pointnet2](https://github.com/charlesq34/pointne
 
 
 faiss-gpu is optional for GPU KNN search. 
+
+#### Pointnet2 Compile
+To run the hierarchical model, one has to comile the tensorflow operations of pointnet2 (`models/sem_seg/pointnet2/tf_op`).
+The compiled `*.so` files in this repo was based on CUDA 10.0 and above python packages.
+
+#### Docker
+
+To deploy the environment easily, docker file in `docker`  is provided.
+
+Example of using the docker. First build the docker image:
+```bash
+cd docker
+nvidia-docker build -t shinkeli/campus3d:latest .
+```
+Run the docker in bash:
+```bash
+nvidia-docker run -it -v <path to Campus3D>:/root/Campus3D shinkeli/campus3d:latest /bin/bash
+```
 
 ### Training and Evaluation 
 Download the [reduced version](https://3d.dataset.site) of Campus3D and place them into `data`. The data folder should be in the following structure:
