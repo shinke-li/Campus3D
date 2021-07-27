@@ -1,5 +1,5 @@
 # Campus3D：A Photogrammetry Point Cloud Benchmark for Hierarchical Understanding of Outdoor Scene
-#### The repository contains the utilization and implementation of this [ACM MM 2020 Paper](https://3d.dataset.site). The Campus3D dataset including full version and reduced version can be donwloaded from our [official website](https://3d.dataset.site) or the [alternative](https://3d.nus.app).
+#### The repository contains the utilization and implementation of this [ACM MM 2020 Paper](https://arxiv.org/abs/2008.04968). The Campus3D dataset including full version and reduced version can be donwloaded from our [official website](https://3d.dataset.site) or the [alternative](https://3d.nus.app). A reproduce work can be found in [Campus3D-reproducibility](https://github.com/Yuqing-Liao/reproduce-campus3d), which reimplemented the hierarchical learning in PyTorch. More details of the reproduce work are presented in the [ACM MM 2021 companion paper](https://3d.dataset.site).
 ![](SixRegion.png)
 ### Running Environment
 #### Python packages
@@ -78,7 +78,3 @@ cd Campus3D
 python engine/eval.py -cfg  <config_dir> -s TEST_SET -ckpt <check_point_name> -o <output_log> -gpu <gpu_id>
 ```
 The `<check_point_name>` is the name of ckpt in `log/<dir_name>`, where the `<dir_name>` is the set "OUTPUT_DIR" in the config file. The result of IoU, Overall Accuracy and Consistency Rate wiil be written into `<output_log>`, for which the default name depends on the datetime. `<gpu_id>` is to set the gpu id for 'faiss' implementation of GPU based nearest neighbour search.
- 
-### Customized add-on
-#### New sampling method
-#### New dataset
