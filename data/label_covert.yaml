@@ -1,0 +1,47 @@
+label_name:
+  1: unclassified
+  2: ground
+  3: natural
+  4: play_field
+  5: man_made
+  6: path_stair
+  7: sheltered
+  8: unsheltered
+  9: bus_stop
+  10: driving_road
+  11: vehicle
+  12: car
+  13: bus
+  14: not_vehicle
+  15: construction
+  16: building
+  17: wall
+  18: roof
+  19: link
+  20: facility
+  21: artificial_landscape
+  22: lamp
+  23: others
+leaf_label:
+  index:
+  - 0
+  - 2
+  - 3
+  - 6
+  - 7
+  - 8
+  - 11
+  - 12
+  - 13
+  - 17
+  - 16
+  - 18
+  - 20
+  - 21
+  - 22
+ins_label_C4:
+  index:
+  - 3
+  - 10
+  - 15
+  - 18
