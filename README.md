@@ -81,3 +81,25 @@ cd Campus3D
 python engine/eval.py -cfg  <config_dir> -s TEST_SET -ckpt <check_point_name> -o <output_log> -gpu <gpu_id>
 ```
 The `<check_point_name>` is the name of ckpt in `log/<dir_name>`, where the `<dir_name>` is the set "OUTPUT_DIR" in the config file. The result of IoU, Overall Accuracy and Consistency Rate wiil be written into `<output_log>`, for which the default name depends on the datetime. `<gpu_id>` is to set the gpu id for 'faiss' implementation of GPU based nearest neighbour search.
+
+
+#### If you find our work useful, please considering citing
+
+```
+@inproceedings{li2020campus3d,
+  title={Campus3d: A photogrammetry point cloud benchmark for hierarchical understanding of outdoor scene},
+  author={Li, Xinke and Li, Chongshou and Tong, Zekun and Lim, Andrew and Yuan, Junsong and Wu, Yuwei and Tang, Jing and Huang, Raymond},
+  booktitle={Proceedings of the 28th ACM International Conference on Multimedia},
+  pages={238--246},
+  year={2020}
+}
+
+@inproceedings{liao2021reproducibility,
+  title={Reproducibility Companion Paper: Campus3D: A Photogrammetry Point Cloud Benchmark for Outdoor Scene Hierarchical Understanding},
+  author={Liao, Yuqing and Li, Xinke and Tong, Zekun and Zhao, Yabang and Lim, Andrew and Kuang, Zhenzhong and Midoglu, Cise},
+  booktitle={Proceedings of the 29th ACM International Conference on Multimedia},
+  pages={3610--3614},
+  year={2021}
+}
+```
+
