@@ -1,5 +1,5 @@
 # Campus3D：A Photogrammetry Point Cloud Benchmark for Hierarchical Understanding of Outdoor Scene
-#### The repository contains the utilization and implementation of this [ACM MM 2020 Paper](https://arxiv.org/abs/2008.04968). The Campus3D dataset including full version and reduced version can be donwloaded from our [website](https://3d.nus.app) (https://3d.dataset.site is currently unstable, please use https://3d.nus.app). A reproduce work can be found in [reproduce-campus3D](https://github.com/Yuqing-Liao/reproduce-campus3d), which reimplemented the hierarchical learning in PyTorch with more deep models. More details of the reproduce work are presented in the [ACM MM 2021 companion paper](https://dl.acm.org/doi/pdf/10.1145/3474085.3477934).
+#### The repository contains the utilization and implementation of this [ACM MM 2020 Paper](https://arxiv.org/abs/2008.04968). The Campus3D dataset including full version and reduced version can be donwloaded from our [website](http://www.aicampus3d.com/) (New Website). A reproduce work can be found in [reproduce-campus3D](https://github.com/Yuqing-Liao/reproduce-campus3d), which reimplemented the hierarchical learning in PyTorch with more deep models. More details of the reproduce work are presented in the [ACM MM 2021 companion paper](https://dl.acm.org/doi/pdf/10.1145/3474085.3477934).
 ![](SixRegion.png)
 
 
